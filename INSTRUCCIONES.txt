@@ -1,0 +1,53 @@
+CONVERTIDOR DE IMAGEN A SVG - PROYECTO FINAL
+
+FUNCIONES PRINCIPALES
+- Convierte PNG, JPG y JPEG a SVG.
+- Vista previa de la imagen seleccionada.
+- Calidades: Rapida, Normal, Alta y Super alta.
+- Pantalla de carga al iniciar.
+- Proteccion contra doble apertura: solo permite una instancia en Windows.
+- El SVG se guarda en la misma carpeta de la imagen original.
+- Permite abrir el SVG y la carpeta de salida desde la aplicacion.
+
+ARCHIVOS DEL PROYECTO
+- app.py: interfaz grafica.
+- launcher.py: arranque, loading screen y proteccion de una sola instancia.
+- vectorizer.py: motor de conversion PNG/JPEG a SVG.
+- splash.png: imagen usada por la pantalla de carga.
+- requirements.txt: dependencias de Python.
+- build_exe.bat: genera la version recomendada para Windows.
+- diagnostico.bat: ejecuta la aplicacion con consola visible para diagnostico.
+- INSTRUCCIONES.txt: este archivo.
+
+GENERAR EL EJECUTABLE
+1. Extrae toda la carpeta del proyecto.
+2. Ejecuta build_exe.bat.
+3. El script instala/verifica dependencias y limpia compilaciones anteriores.
+4. Al finalizar abre:
+   dist\ConvertidorImagenSVG\ConvertidorImagenSVG.exe
+
+ENTREGA A TECNICOS
+La aplicacion usa PyInstaller ONEDIR para mejorar el tiempo de arranque.
+Debes compartir TODA la carpeta:
+   dist\ConvertidorImagenSVG
+
+No copies solamente ConvertidorImagenSVG.exe, porque necesita la carpeta _internal.
+
+ARRANQUE
+1. El tecnico abre ConvertidorImagenSVG.exe.
+2. Aparece la pantalla de carga.
+3. Se prepara la aplicacion.
+4. Se muestra la ventana principal y se cierra el loading.
+5. Si se intenta abrir nuevamente mientras ya esta ejecutandose, la segunda instancia se cierra.
+
+CALIDAD
+- Rapida: menor tiempo de procesamiento.
+- Normal: equilibrio entre detalle y velocidad.
+- Alta: mayor detalle.
+- Super alta: maxima nitidez disponible; puede tardar varios segundos o mas con imagenes grandes.
+
+DIAGNOSTICO
+Si la aplicacion no abre correctamente, ejecuta diagnostico.bat y conserva el mensaje de error mostrado en consola.
+
+NOTA DE MANTENIMIENTO
+No se incluyen carpetas build/dist, archivos .spec, ejecutables compilados ni archivos de prueba en este paquete fuente final. build_exe.bat elimina automaticamente restos temporales de compilaciones anteriores.

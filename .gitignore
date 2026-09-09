@@ -1,0 +1,30 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# PyInstaller
+build/
+dist/
+build_onefile/
+dist_onefile/
+*.spec
+
+# Ejecutables generados
+*.exe
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporales
+*.tmp
+*.temp
+*.log
